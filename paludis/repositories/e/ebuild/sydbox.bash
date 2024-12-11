@@ -230,6 +230,42 @@ esandbox_3()
     disable_truncate)
         [[ -e "/dev/syd/sandbox/truncate:off" ]]
         ;;
+    enabled_rename)
+        [[ -e "/dev/syd/sandbox/rename?" ]]
+        ;;
+    enable_rename)
+        [[ -e "/dev/syd/sandbox/rename:on" ]]
+        ;;
+    disable_rename)
+        [[ -e "/dev/syd/sandbox/rename:off" ]]
+        ;;
+    enabled_link)
+        [[ -e "/dev/syd/sandbox/link?" ]]
+        ;;
+    enable_link)
+        [[ -e "/dev/syd/sandbox/link:on" ]]
+        ;;
+    disable_link)
+        [[ -e "/dev/syd/sandbox/link:off" ]]
+        ;;
+    enabled_chdir)
+        [[ -e "/dev/syd/sandbox/chdir?" ]]
+        ;;
+    enable_chdir)
+        [[ -e "/dev/syd/sandbox/chdir:on" ]]
+        ;;
+    disable_chdir)
+        [[ -e "/dev/syd/sandbox/chdir:off" ]]
+        ;;
+    enabled_readdir)
+        [[ -e "/dev/syd/sandbox/readdir?" ]]
+        ;;
+    enable_readdir)
+        [[ -e "/dev/syd/sandbox/readdir:on" ]]
+        ;;
+    disable_readdir)
+        [[ -e "/dev/syd/sandbox/readdir:off" ]]
+        ;;
     enabled_attr)
         [[ -e "/dev/syd/sandbox/attr?" ]]
         ;;
@@ -417,6 +453,70 @@ esandbox_3()
     nodeny_truncate)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
         sydbox_internal_path_3 "deny/truncate" '-' "${@}"
+        ;;
+    allow_rename)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        sydbox_internal_path_3 "allow/rename" '+' "${@}"
+        ;;
+    disallow_rename)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        sydbox_internal_path_3 "allow/rename" '-' "${@}"
+        ;;
+    deny_rename)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        sydbox_internal_path_3 "deny/rename" '+' "${@}"
+        ;;
+    nodeny_rename)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        sydbox_internal_path_3 "deny/rename" '-' "${@}"
+        ;;
+    allow_link)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        sydbox_internal_path_3 "allow/link" '+' "${@}"
+        ;;
+    disallow_link)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        sydbox_internal_path_3 "allow/link" '-' "${@}"
+        ;;
+    deny_link)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        sydbox_internal_path_3 "deny/link" '+' "${@}"
+        ;;
+    nodeny_link)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        sydbox_internal_path_3 "deny/link" '-' "${@}"
+        ;;
+    allow_chdir)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        sydbox_internal_path_3 "allow/chdir" '+' "${@}"
+        ;;
+    disallow_chdir)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        sydbox_internal_path_3 "allow/chdir" '-' "${@}"
+        ;;
+    deny_chdir)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        sydbox_internal_path_3 "deny/chdir" '+' "${@}"
+        ;;
+    nodeny_chdir)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        sydbox_internal_path_3 "deny/chdir" '-' "${@}"
+        ;;
+    allow_readdir)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        sydbox_internal_path_3 "allow/readdir" '+' "${@}"
+        ;;
+    disallow_readdir)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        sydbox_internal_path_3 "allow/readdir" '-' "${@}"
+        ;;
+    deny_readdir)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        sydbox_internal_path_3 "deny/readdir" '+' "${@}"
+        ;;
+    nodeny_readdir)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        sydbox_internal_path_3 "deny/readdir" '-' "${@}"
         ;;
     allow_attr)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
@@ -686,13 +786,13 @@ esandbox_1()
     disable_stat)
         : # no-op, only supported for syd[>=3]
         ;;
-    enabled_write|enabled_create|enabled_delete|enabled_truncate|enabled_attr|enabled_chown|enabled_chgrp|enabled_iotl|enabled_node|enabled_tmpfile)
+    enabled_write|enabled_create|enabled_delete|enabled_truncate|enabled_rename|enabled_link|enabled_chdir|enabled_readdir|enabled_attr|enabled_chown|enabled_chgrp|enabled_iotl|enabled_node|enabled_tmpfile)
         [[ -e "/dev/sydbox/core/sandbox/write?" ]]
         ;;
-    enable_write|enable_create|enable_delete|enable_truncate|enable_attr|enable_chown|enable_chgrp|enable_iotl|enable_node|enable_tmpfile)
+    enable_write|enable_create|enable_delete|enable_truncate|enable_rename|enable_link|enable_chdir|enable_readdir|enable_attr|enable_chown|enable_chgrp|enable_iotl|enable_node|enable_tmpfile)
         [[ -e "/dev/sydbox/core/sandbox/write:deny" ]]
         ;;
-    disable_write|disable_create|disable_delete|disable_truncate|disable_attr|disable_chown|disable_chgrp|disable_iotl|disable_node|disable_tmpfile)
+    disable_write|disable_create|disable_delete|disable_truncate|disable_rename|disable_link|disable_chdir|disable_readdir|disable_attr|disable_chown|disable_chgrp|disable_iotl|disable_node|disable_tmpfile)
         [[ -e "/dev/sydbox/core/sandbox/write:off" ]]
         ;;
     enabled_exec)
@@ -713,19 +813,19 @@ esandbox_1()
     disable_net)
         [[ -e "/dev/sydbox/core/sandbox/network:off" ]]
         ;;
-    allow|allow_path|allow_write|allow_create|allow_delete|allow_truncate|allow_attr|allow_chown|allow_chgrp|allow_ioctl|allow_node|allow_tmpfile)
+    allow|allow_path|allow_write|allow_create|allow_delete|allow_truncate|allow_rename|allow_link|allow_chdir|allow_readdir|allow_attr|allow_chown|allow_chgrp|allow_ioctl|allow_node|allow_tmpfile)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
         sydbox_internal_path_1 "whitelist/write" '+' "${@}"
         ;;
-    disallow|disallow_path|disallow_write|disallow_create|disallow_delete|disallow_truncate|disallow_attr|disallow_chown|disallow_chgrp|disallow_ioctl|disallow_node|disallow_tmpfile)
+    disallow|disallow_path|disallow_write|disallow_create|disallow_delete|disallow_truncate|disallow_rename|disallow_link|disallow_chdir|disallow_readdir|disallow_attr|disallow_chown|disallow_chgrp|disallow_ioctl|disallow_node|disallow_tmpfile)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
         sydbox_internal_path_1 "whitelist/write" '-' "${@}"
         ;;
-    deny_write|deny_create|deny_delete|deny_truncate|deny_attr|deny_chown|deny_chgrp|deny_ioctl|deny_node|deny_tmpfile)
+    deny_write|deny_create|deny_delete|deny_truncate|deny_rename|deny_link|deny_chdir|deny_readdir|deny_attr|deny_chown|deny_chgrp|deny_ioctl|deny_node|deny_tmpfile)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
         : # no-op, only supported for syd[>=3]
         ;;
-    nodeny_write|nodeny_create|nodeny_delete|nodeny_truncate|nodeny_attr|nodeny_chown|nodeny_chgrp|nodeny_ioctl|nodeny_node|nodeny_tmpfile)
+    nodeny_write|nodeny_create|nodeny_delete|nodeny_truncate|nodeny_rename|nodeny_link|nodeny_chdir|nodeny_readdir|nodeny_attr|nodeny_chown|nodeny_chgrp|nodeny_ioctl|nodeny_node|nodeny_tmpfile)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
         : # no-op, only supported for syd[>=3]
         ;;
