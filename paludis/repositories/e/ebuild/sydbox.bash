@@ -159,10 +159,10 @@ esandbox_3()
         [[ -e "/dev/syd/lock:exec" ]]
         ;;
     wait_all)
-        ebuild_notice "warning" "${FUNCNAME} ${cmd} is not implemented for sydbox-3"
+        ebuild_notice 'warning' "${FUNCNAME} ${cmd} is not implemented for sydbox-3"
         false;;
     wait_eldest)
-        ebuild_notice "warning" "${FUNCNAME} ${cmd} is not implemented for sydbox-3"
+        ebuild_notice 'warning' "${FUNCNAME} ${cmd} is not implemented for sydbox-3"
         false;;
     enabled|enabled_path)
         # Compatibility with syd-1:
@@ -186,211 +186,211 @@ esandbox_3()
         [[ -e '/dev/syd/sandbox/stat:off' ]]
         ;;
     enabled_read)
-        [[ -e "/dev/syd/sandbox/read?" ]]
+        [[ -e '/dev/syd/sandbox/read?' ]]
         ;;
     enable_read)
-        [[ -e "/dev/syd/sandbox/read:on" ]]
+        [[ -e '/dev/syd/sandbox/read:on' ]]
         ;;
     disable_read)
-        [[ -e "/dev/syd/sandbox/read:off" ]]
+        [[ -e '/dev/syd/sandbox/read:off' ]]
         ;;
     enabled_write)
-        [[ -e "/dev/syd/sandbox/write?" ]]
+        [[ -e '/dev/syd/sandbox/write?' ]]
         ;;
     enable_write)
-        [[ -e "/dev/syd/sandbox/write:on" ]]
+        [[ -e '/dev/syd/sandbox/write:on' ]]
         ;;
     disable_write)
-        [[ -e "/dev/syd/sandbox/write:off" ]]
+        [[ -e '/dev/syd/sandbox/write:off' ]]
         ;;
     enabled_exec)
-        [[ -e "/dev/syd/sandbox/exec?" ]]
+        [[ -e '/dev/syd/sandbox/exec?' ]]
         ;;
     enable_exec)
-        [[ -e "/dev/syd/sandbox/exec:on" ]]
+        [[ -e '/dev/syd/sandbox/exec:on' ]]
         ;;
     disable_exec)
-        [[ -e "/dev/syd/sandbox/exec:off" ]]
+        [[ -e '/dev/syd/sandbox/exec:off' ]]
         ;;
     enabled_ioctl)
-        [[ -e "/dev/syd/sandbox/ioctl?" ]]
+        [[ -e '/dev/syd/sandbox/ioctl?' ]]
         ;;
     enable_ioctl)
-        [[ -e "/dev/syd/sandbox/ioctl:on" ]]
+        [[ -e '/dev/syd/sandbox/ioctl:on' ]]
         ;;
     disable_ioctl)
-        [[ -e "/dev/syd/sandbox/ioctl:off" ]]
+        [[ -e '/dev/syd/sandbox/ioctl:off' ]]
         ;;
     enabled_create)
-        [[ -e "/dev/syd/sandbox/create?" ]]
+        [[ -e '/dev/syd/sandbox/create?' ]]
         ;;
     enable_create)
-        [[ -e "/dev/syd/sandbox/create:on" ]]
+        [[ -e '/dev/syd/sandbox/create:on' ]]
         ;;
     disable_create)
-        [[ -e "/dev/syd/sandbox/create:off" ]]
+        [[ -e '/dev/syd/sandbox/create:off' ]]
         ;;
     enabled_delete)
-        [[ -e "/dev/syd/sandbox/delete?" ]]
+        [[ -e '/dev/syd/sandbox/delete?' ]]
         ;;
     enable_delete)
-        [[ -e "/dev/syd/sandbox/delete:on" ]]
+        [[ -e '/dev/syd/sandbox/delete:on' ]]
         ;;
     disable_delete)
-        [[ -e "/dev/syd/sandbox/delete:off" ]]
+        [[ -e '/dev/syd/sandbox/delete:off' ]]
         ;;
     enabled_rename)
-        [[ -e "/dev/syd/sandbox/rename?" ]]
+        [[ -e '/dev/syd/sandbox/rename?' ]]
         ;;
     enable_rename)
-        [[ -e "/dev/syd/sandbox/rename:on" ]]
+        [[ -e '/dev/syd/sandbox/rename:on' ]]
         ;;
     disable_rename)
-        [[ -e "/dev/syd/sandbox/rename:off" ]]
+        [[ -e '/dev/syd/sandbox/rename:off' ]]
         ;;
     enabled_symlink)
-        [[ -e "/dev/syd/sandbox/symlink?" ]]
+        [[ -e '/dev/syd/sandbox/symlink?' ]]
         ;;
     enable_symlink)
-        [[ -e "/dev/syd/sandbox/symlink:on" ]]
+        [[ -e '/dev/syd/sandbox/symlink:on' ]]
         ;;
     disable_symlink)
-        [[ -e "/dev/syd/sandbox/symlink:off" ]]
+        [[ -e '/dev/syd/sandbox/symlink:off' ]]
         ;;
     enabled_truncate)
-        [[ -e "/dev/syd/sandbox/truncate?" ]]
+        [[ -e '/dev/syd/sandbox/truncate?' ]]
         ;;
     enable_truncate)
-        [[ -e "/dev/syd/sandbox/truncate:on" ]]
+        [[ -e '/dev/syd/sandbox/truncate:on' ]]
         ;;
     disable_truncate)
-        [[ -e "/dev/syd/sandbox/truncate:off" ]]
+        [[ -e '/dev/syd/sandbox/truncate:off' ]]
         ;;
     enabled_truncate)
-        [[ -e "/dev/syd/sandbox/truncate?" ]]
+        [[ -e '/dev/syd/sandbox/truncate?' ]]
         ;;
     enable_truncate)
-        [[ -e "/dev/syd/sandbox/truncate:on" ]]
+        [[ -e '/dev/syd/sandbox/truncate:on' ]]
         ;;
     disable_truncate)
-        [[ -e "/dev/syd/sandbox/truncate:off" ]]
+        [[ -e '/dev/syd/sandbox/truncate:off' ]]
         ;;
     enabled_chdir)
-        [[ -e "/dev/syd/sandbox/chdir?" ]]
+        [[ -e '/dev/syd/sandbox/chdir?' ]]
         ;;
     enable_chdir)
-        [[ -e "/dev/syd/sandbox/chdir:on" ]]
+        [[ -e '/dev/syd/sandbox/chdir:on' ]]
         ;;
     disable_chdir)
-        [[ -e "/dev/syd/sandbox/chdir:off" ]]
+        [[ -e '/dev/syd/sandbox/chdir:off' ]]
         ;;
     enabled_readdir)
-        [[ -e "/dev/syd/sandbox/readdir?" ]]
+        [[ -e '/dev/syd/sandbox/readdir?' ]]
         ;;
     enable_readdir)
-        [[ -e "/dev/syd/sandbox/readdir:on" ]]
+        [[ -e '/dev/syd/sandbox/readdir:on' ]]
         ;;
     disable_readdir)
-        [[ -e "/dev/syd/sandbox/readdir:off" ]]
+        [[ -e '/dev/syd/sandbox/readdir:off' ]]
         ;;
     enabled_mkdir)
-        [[ -e "/dev/syd/sandbox/mkdir?" ]]
+        [[ -e '/dev/syd/sandbox/mkdir?' ]]
         ;;
     enable_mkdir)
-        [[ -e "/dev/syd/sandbox/mkdir:on" ]]
+        [[ -e '/dev/syd/sandbox/mkdir:on' ]]
         ;;
     disable_mkdir)
-        [[ -e "/dev/syd/sandbox/mkdir:off" ]]
+        [[ -e '/dev/syd/sandbox/mkdir:off' ]]
         ;;
     enabled_chown)
-        [[ -e "/dev/syd/sandbox/chown?" ]]
+        [[ -e '/dev/syd/sandbox/chown?' ]]
         ;;
     enable_chown)
-        [[ -e "/dev/syd/sandbox/chown:on" ]]
+        [[ -e '/dev/syd/sandbox/chown:on' ]]
         ;;
     disable_chown)
-        [[ -e "/dev/syd/sandbox/chown:off" ]]
+        [[ -e '/dev/syd/sandbox/chown:off' ]]
         ;;
     enabled_chgrp)
-        [[ -e "/dev/syd/sandbox/chgrp?" ]]
+        [[ -e '/dev/syd/sandbox/chgrp?' ]]
         ;;
     enable_chgrp)
-        [[ -e "/dev/syd/sandbox/chgrp:on" ]]
+        [[ -e '/dev/syd/sandbox/chgrp:on' ]]
         ;;
     disable_chgrp)
-        [[ -e "/dev/syd/sandbox/chgrp:off" ]]
+        [[ -e '/dev/syd/sandbox/chgrp:off' ]]
         ;;
     enabled_chmod)
-        [[ -e "/dev/syd/sandbox/chmod?" ]]
+        [[ -e '/dev/syd/sandbox/chmod?' ]]
         ;;
     enable_chmod)
-        [[ -e "/dev/syd/sandbox/chmod:on" ]]
+        [[ -e '/dev/syd/sandbox/chmod:on' ]]
         ;;
     disable_chmod)
-        [[ -e "/dev/syd/sandbox/chmod:off" ]]
+        [[ -e '/dev/syd/sandbox/chmod:off' ]]
         ;;
     enabled_chattr)
-        [[ -e "/dev/syd/sandbox/chattr?" ]]
+        [[ -e '/dev/syd/sandbox/chattr?' ]]
         ;;
     enable_chattr)
-        [[ -e "/dev/syd/sandbox/chattr:on" ]]
+        [[ -e '/dev/syd/sandbox/chattr:on' ]]
         ;;
     disable_chattr)
-        [[ -e "/dev/syd/sandbox/chattr:off" ]]
+        [[ -e '/dev/syd/sandbox/chattr:off' ]]
         ;;
     enabled_chroot)
-        [[ -e "/dev/syd/sandbox/chroot?" ]]
+        [[ -e '/dev/syd/sandbox/chroot?' ]]
         ;;
     enable_chroot)
-        [[ -e "/dev/syd/sandbox/chroot:on" ]]
+        [[ -e '/dev/syd/sandbox/chroot:on' ]]
         ;;
     disable_chroot)
-        [[ -e "/dev/syd/sandbox/chroot:off" ]]
+        [[ -e '/dev/syd/sandbox/chroot:off' ]]
         ;;
     enabled_utime)
-        [[ -e "/dev/syd/sandbox/utime?" ]]
+        [[ -e '/dev/syd/sandbox/utime?' ]]
         ;;
     enable_utime)
-        [[ -e "/dev/syd/sandbox/utime:on" ]]
+        [[ -e '/dev/syd/sandbox/utime:on' ]]
         ;;
     disable_utime)
-        [[ -e "/dev/syd/sandbox/utime:off" ]]
+        [[ -e '/dev/syd/sandbox/utime:off' ]]
         ;;
     enabled_mkdev)
-        [[ -e "/dev/syd/sandbox/mkdev?" ]]
+        [[ -e '/dev/syd/sandbox/mkdev?' ]]
         ;;
     enable_mkdev)
-        [[ -e "/dev/syd/sandbox/mkdev:on" ]]
+        [[ -e '/dev/syd/sandbox/mkdev:on' ]]
         ;;
     disable_mkdev)
-        [[ -e "/dev/syd/sandbox/mkdev:off" ]]
+        [[ -e '/dev/syd/sandbox/mkdev:off' ]]
         ;;
     enabled_mkfifo)
-        [[ -e "/dev/syd/sandbox/mkfifo?" ]]
+        [[ -e '/dev/syd/sandbox/mkfifo?' ]]
         ;;
     enable_mkfifo)
-        [[ -e "/dev/syd/sandbox/mkfifo:on" ]]
+        [[ -e '/dev/syd/sandbox/mkfifo:on' ]]
         ;;
     disable_mkfifo)
-        [[ -e "/dev/syd/sandbox/mkfifo:off" ]]
+        [[ -e '/dev/syd/sandbox/mkfifo:off' ]]
         ;;
     enabled_mktemp)
-        [[ -e "/dev/syd/sandbox/mktemp?" ]]
+        [[ -e '/dev/syd/sandbox/mktemp?' ]]
         ;;
     enable_mktemp)
-        [[ -e "/dev/syd/sandbox/mktemp:on" ]]
+        [[ -e '/dev/syd/sandbox/mktemp:on' ]]
         ;;
     disable_mktemp)
-        [[ -e "/dev/syd/sandbox/mktemp:off" ]]
+        [[ -e '/dev/syd/sandbox/mktemp:off' ]]
         ;;
     enabled_net)
-        [[ -e "/dev/syd/sandbox/net?" ]]
+        [[ -e '/dev/syd/sandbox/net?' ]]
         ;;
     enable_net)
-        [[ -e "/dev/syd/sandbox/net:on" ]]
+        [[ -e '/dev/syd/sandbox/net:on' ]]
         ;;
     disable_net)
-        [[ -e "/dev/syd/sandbox/net:off" ]]
+        [[ -e '/dev/syd/sandbox/net:off' ]]
         ;;
     allow|allow_path)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
@@ -414,355 +414,355 @@ esandbox_3()
         ;;
     allow_stat)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/stat" '+' "${@}"
+        sydbox_internal_path_3 'allow/stat' '+' "${@}"
         ;;
     disallow_stat)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/stat" '-' "${@}"
+        sydbox_internal_path_3 'allow/stat' '-' "${@}"
         ;;
     deny_stat)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/stat" '+' "${@}"
+        sydbox_internal_path_3 'deny/stat' '+' "${@}"
         ;;
     nodeny_stat)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/stat" '-' "${@}"
+        sydbox_internal_path_3 'deny/stat' '-' "${@}"
         ;;
     allow_read)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/read" '+' "${@}"
+        sydbox_internal_path_3 'allow/read' '+' "${@}"
         ;;
     disallow_read)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/read" '-' "${@}"
+        sydbox_internal_path_3 'allow/read' '-' "${@}"
         ;;
     deny_read)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/read" '+' "${@}"
+        sydbox_internal_path_3 'deny/read' '+' "${@}"
         ;;
     nodeny_read)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/read" '-' "${@}"
+        sydbox_internal_path_3 'deny/read' '-' "${@}"
         ;;
     allow_write)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/write" '+' "${@}"
+        sydbox_internal_path_3 'allow/write' '+' "${@}"
         ;;
     disallow_write)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/write" '-' "${@}"
+        sydbox_internal_path_3 'allow/write' '-' "${@}"
         ;;
     deny_write)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/write" '+' "${@}"
+        sydbox_internal_path_3 'deny/write' '+' "${@}"
         ;;
     nodeny_write)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/write" '-' "${@}"
+        sydbox_internal_path_3 'deny/write' '-' "${@}"
         ;;
     allow_exec)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/exec" '+' "${@}"
+        sydbox_internal_path_3 'allow/exec' '+' "${@}"
         ;;
     disallow_exec)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/exec" '-' "${@}"
+        sydbox_internal_path_3 'allow/exec' '-' "${@}"
         ;;
     deny_exec)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/exec" '+' "${@}"
+        sydbox_internal_path_3 'deny/exec' '+' "${@}"
         ;;
     nodeny_exec)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/exec" '-' "${@}"
+        sydbox_internal_path_3 'deny/exec' '-' "${@}"
         ;;
     allow_ioctl)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/ioctl" '+' "${@}"
+        sydbox_internal_path_3 'allow/ioctl' '+' "${@}"
         ;;
     disallow_ioctl)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/ioctl" '-' "${@}"
+        sydbox_internal_path_3 'allow/ioctl' '-' "${@}"
         ;;
     deny_ioctl)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/ioctl" '+' "${@}"
+        sydbox_internal_path_3 'deny/ioctl' '+' "${@}"
         ;;
     nodeny_ioctl)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/ioctl" '-' "${@}"
+        sydbox_internal_path_3 'deny/ioctl' '-' "${@}"
         ;;
     allow_create)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/create" '+' "${@}"
+        sydbox_internal_path_3 'allow/create' '+' "${@}"
         ;;
     disallow_create)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/create" '-' "${@}"
+        sydbox_internal_path_3 'allow/create' '-' "${@}"
         ;;
     deny_create)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/create" '+' "${@}"
+        sydbox_internal_path_3 'deny/create' '+' "${@}"
         ;;
     nodeny_create)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/create" '-' "${@}"
+        sydbox_internal_path_3 'deny/create' '-' "${@}"
         ;;
     allow_delete)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/delete" '+' "${@}"
+        sydbox_internal_path_3 'allow/delete' '+' "${@}"
         ;;
     disallow_delete)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/delete" '-' "${@}"
+        sydbox_internal_path_3 'allow/delete' '-' "${@}"
         ;;
     deny_delete)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/delete" '+' "${@}"
+        sydbox_internal_path_3 'deny/delete' '+' "${@}"
         ;;
     nodeny_delete)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/delete" '-' "${@}"
+        sydbox_internal_path_3 'deny/delete' '-' "${@}"
         ;;
     allow_rename)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/rename" '+' "${@}"
+        sydbox_internal_path_3 'allow/rename' '+' "${@}"
         ;;
     disallow_rename)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/rename" '-' "${@}"
+        sydbox_internal_path_3 'allow/rename' '-' "${@}"
         ;;
     deny_rename)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/rename" '+' "${@}"
+        sydbox_internal_path_3 'deny/rename' '+' "${@}"
         ;;
     nodeny_rename)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/rename" '-' "${@}"
+        sydbox_internal_path_3 'deny/rename' '-' "${@}"
         ;;
     allow_symlink)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/symlink" '+' "${@}"
+        sydbox_internal_path_3 'allow/symlink' '+' "${@}"
         ;;
     disallow_symlink)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/symlink" '-' "${@}"
+        sydbox_internal_path_3 'allow/symlink' '-' "${@}"
         ;;
     deny_symlink)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/symlink" '+' "${@}"
+        sydbox_internal_path_3 'deny/symlink' '+' "${@}"
         ;;
     nodeny_symlink)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/symlink" '-' "${@}"
+        sydbox_internal_path_3 'deny/symlink' '-' "${@}"
         ;;
     allow_truncate)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/truncate" '+' "${@}"
+        sydbox_internal_path_3 'allow/truncate' '+' "${@}"
         ;;
     disallow_truncate)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/truncate" '-' "${@}"
+        sydbox_internal_path_3 'allow/truncate' '-' "${@}"
         ;;
     deny_truncate)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/truncate" '+' "${@}"
+        sydbox_internal_path_3 'deny/truncate' '+' "${@}"
         ;;
     nodeny_truncate)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/truncate" '-' "${@}"
+        sydbox_internal_path_3 'deny/truncate' '-' "${@}"
         ;;
     allow_chdir)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/chdir" '+' "${@}"
+        sydbox_internal_path_3 'allow/chdir' '+' "${@}"
         ;;
     disallow_chdir)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/chdir" '-' "${@}"
+        sydbox_internal_path_3 'allow/chdir' '-' "${@}"
         ;;
     deny_chdir)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/chdir" '+' "${@}"
+        sydbox_internal_path_3 'deny/chdir' '+' "${@}"
         ;;
     nodeny_chdir)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/chdir" '-' "${@}"
+        sydbox_internal_path_3 'deny/chdir' '-' "${@}"
         ;;
     allow_readdir)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/readdir" '+' "${@}"
+        sydbox_internal_path_3 'allow/readdir' '+' "${@}"
         ;;
     disallow_readdir)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/readdir" '-' "${@}"
+        sydbox_internal_path_3 'allow/readdir' '-' "${@}"
         ;;
     deny_readdir)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/readdir" '+' "${@}"
+        sydbox_internal_path_3 'deny/readdir' '+' "${@}"
         ;;
     nodeny_readdir)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/readdir" '-' "${@}"
+        sydbox_internal_path_3 'deny/readdir' '-' "${@}"
         ;;
     allow_mkdir)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/mkdir" '+' "${@}"
+        sydbox_internal_path_3 'allow/mkdir' '+' "${@}"
         ;;
     disallow_mkdir)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/mkdir" '-' "${@}"
+        sydbox_internal_path_3 'allow/mkdir' '-' "${@}"
         ;;
     deny_mkdir)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/mkdir" '+' "${@}"
+        sydbox_internal_path_3 'deny/mkdir' '+' "${@}"
         ;;
     nodeny_mkdir)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/mkdir" '-' "${@}"
+        sydbox_internal_path_3 'deny/mkdir' '-' "${@}"
         ;;
     allow_chown)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/chown" '+' "${@}"
+        sydbox_internal_path_3 'allow/chown' '+' "${@}"
         ;;
     disallow_chown)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/chown" '-' "${@}"
+        sydbox_internal_path_3 'allow/chown' '-' "${@}"
         ;;
     deny_chown)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/chown" '+' "${@}"
+        sydbox_internal_path_3 'deny/chown' '+' "${@}"
         ;;
     nodeny_chown)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/chown" '-' "${@}"
+        sydbox_internal_path_3 'deny/chown' '-' "${@}"
         ;;
     allow_chgrp)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/chgrp" '+' "${@}"
+        sydbox_internal_path_3 'allow/chgrp' '+' "${@}"
         ;;
     disallow_chgrp)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/chgrp" '-' "${@}"
+        sydbox_internal_path_3 'allow/chgrp' '-' "${@}"
         ;;
     deny_chgrp)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/chgrp" '+' "${@}"
+        sydbox_internal_path_3 'deny/chgrp' '+' "${@}"
         ;;
     nodeny_chgrp)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/chgrp" '-' "${@}"
+        sydbox_internal_path_3 'deny/chgrp' '-' "${@}"
         ;;
     allow_chmod)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/chmod" '+' "${@}"
+        sydbox_internal_path_3 'allow/chmod' '+' "${@}"
         ;;
     disallow_chmod)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/chmod" '-' "${@}"
+        sydbox_internal_path_3 'allow/chmod' '-' "${@}"
         ;;
     deny_chmod)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/chmod" '+' "${@}"
+        sydbox_internal_path_3 'deny/chmod' '+' "${@}"
         ;;
     nodeny_chmod)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/chmod" '-' "${@}"
+        sydbox_internal_path_3 'deny/chmod' '-' "${@}"
         ;;
     allow_chattr)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/chattr" '+' "${@}"
+        sydbox_internal_path_3 'allow/chattr' '+' "${@}"
         ;;
     disallow_chattr)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/chattr" '-' "${@}"
+        sydbox_internal_path_3 'allow/chattr' '-' "${@}"
         ;;
     deny_chattr)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/chattr" '+' "${@}"
+        sydbox_internal_path_3 'deny/chattr' '+' "${@}"
         ;;
     nodeny_chattr)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/chattr" '-' "${@}"
+        sydbox_internal_path_3 'deny/chattr' '-' "${@}"
         ;;
     allow_chroot)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/chroot" '+' "${@}"
+        sydbox_internal_path_3 'allow/chroot' '+' "${@}"
         ;;
     disallow_chroot)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/chroot" '-' "${@}"
+        sydbox_internal_path_3 'allow/chroot' '-' "${@}"
         ;;
     deny_chroot)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/chroot" '+' "${@}"
+        sydbox_internal_path_3 'deny/chroot' '+' "${@}"
         ;;
     nodeny_chroot)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/chroot" '-' "${@}"
+        sydbox_internal_path_3 'deny/chroot' '-' "${@}"
         ;;
     allow_utime)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/utime" '+' "${@}"
+        sydbox_internal_path_3 'allow/utime' '+' "${@}"
         ;;
     disallow_utime)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/utime" '-' "${@}"
+        sydbox_internal_path_3 'allow/utime' '-' "${@}"
         ;;
     deny_utime)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/utime" '+' "${@}"
+        sydbox_internal_path_3 'deny/utime' '+' "${@}"
         ;;
     nodeny_utime)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/utime" '-' "${@}"
+        sydbox_internal_path_3 'deny/utime' '-' "${@}"
         ;;
     allow_mkdev)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/mkdev" '+' "${@}"
+        sydbox_internal_path_3 'allow/mkdev' '+' "${@}"
         ;;
     disallow_mkdev)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/mkdev" '-' "${@}"
+        sydbox_internal_path_3 'allow/mkdev' '-' "${@}"
         ;;
     deny_mkdev)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/mkdev" '+' "${@}"
+        sydbox_internal_path_3 'deny/mkdev' '+' "${@}"
         ;;
     nodeny_mkdev)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/mkdev" '-' "${@}"
+        sydbox_internal_path_3 'deny/mkdev' '-' "${@}"
         ;;
     allow_mkfifo)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/mkfifo" '+' "${@}"
+        sydbox_internal_path_3 'allow/mkfifo' '+' "${@}"
         ;;
     disallow_mkfifo)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/mkfifo" '-' "${@}"
+        sydbox_internal_path_3 'allow/mkfifo' '-' "${@}"
         ;;
     deny_mkfifo)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/mkfifo" '+' "${@}"
+        sydbox_internal_path_3 'deny/mkfifo' '+' "${@}"
         ;;
     nodeny_mkfifo)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/mkfifo" '-' "${@}"
+        sydbox_internal_path_3 'deny/mkfifo' '-' "${@}"
         ;;
     allow_mktemp)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/mktemp" '+' "${@}"
+        sydbox_internal_path_3 'allow/mktemp' '+' "${@}"
         ;;
     disallow_mktemp)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "allow/mktemp" '-' "${@}"
+        sydbox_internal_path_3 'allow/mktemp' '-' "${@}"
         ;;
     deny_mktemp)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/mktemp" '+' "${@}"
+        sydbox_internal_path_3 'deny/mktemp' '+' "${@}"
         ;;
     nodeny_mktemp)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "deny/mktemp" '-' "${@}"
+        sydbox_internal_path_3 'deny/mktemp' '-' "${@}"
         ;;
     allow_net)
         local c='allow/net/bind'
@@ -792,179 +792,179 @@ esandbox_3()
         ;;
     addfilter|addfilter_path)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/write" '+' "${@}"
+        sydbox_internal_path_1 'filter/write' '+' "${@}"
         ;;
     rmfilter|rmfilter_path)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/write" '-' "${@}"
+        sydbox_internal_path_1 'filter/write' '-' "${@}"
         ;;
     addfilter_stat)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/stat" '+' "${@}"
+        sydbox_internal_path_1 'filter/stat' '+' "${@}"
         ;;
     rmfilter_stat)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/stat" '-' "${@}"
+        sydbox_internal_path_1 'filter/stat' '-' "${@}"
         ;;
     addfilter_read)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/read" '+' "${@}"
+        sydbox_internal_path_1 'filter/read' '+' "${@}"
         ;;
     rmfilter_read)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/read" '-' "${@}"
+        sydbox_internal_path_1 'filter/read' '-' "${@}"
         ;;
     addfilter_exec)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/exec" '+' "${@}"
+        sydbox_internal_path_1 'filter/exec' '+' "${@}"
         ;;
     rmfilter_exec)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/exec" '-' "${@}"
+        sydbox_internal_path_1 'filter/exec' '-' "${@}"
         ;;
     addfilter_ioctl)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/ioctl" '+' "${@}"
+        sydbox_internal_path_1 'filter/ioctl' '+' "${@}"
         ;;
     rmfilter_ioctl)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/ioctl" '-' "${@}"
+        sydbox_internal_path_1 'filter/ioctl' '-' "${@}"
         ;;
     addfilter_create)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/create" '+' "${@}"
+        sydbox_internal_path_1 'filter/create' '+' "${@}"
         ;;
     rmfilter_create)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/create" '-' "${@}"
+        sydbox_internal_path_1 'filter/create' '-' "${@}"
         ;;
     addfilter_delete)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/delete" '+' "${@}"
+        sydbox_internal_path_1 'filter/delete' '+' "${@}"
         ;;
     rmfilter_delete)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/delete" '-' "${@}"
+        sydbox_internal_path_1 'filter/delete' '-' "${@}"
         ;;
     addfilter_rename)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/rename" '+' "${@}"
+        sydbox_internal_path_1 'filter/rename' '+' "${@}"
         ;;
     rmfilter_rename)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/rename" '-' "${@}"
+        sydbox_internal_path_1 'filter/rename' '-' "${@}"
         ;;
     addfilter_symlink)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/symlink" '+' "${@}"
+        sydbox_internal_path_1 'filter/symlink' '+' "${@}"
         ;;
     rmfilter_symlink)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/symlink" '-' "${@}"
+        sydbox_internal_path_1 'filter/symlink' '-' "${@}"
         ;;
     addfilter_truncate)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/truncate" '+' "${@}"
+        sydbox_internal_path_1 'filter/truncate' '+' "${@}"
         ;;
     rmfilter_truncate)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/truncate" '-' "${@}"
+        sydbox_internal_path_1 'filter/truncate' '-' "${@}"
         ;;
     addfilter_chdir)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/chdir" '+' "${@}"
+        sydbox_internal_path_1 'filter/chdir' '+' "${@}"
         ;;
     rmfilter_chdir)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/chdir" '-' "${@}"
+        sydbox_internal_path_1 'filter/chdir' '-' "${@}"
         ;;
     addfilter_readdir)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/readdir" '+' "${@}"
+        sydbox_internal_path_1 'filter/readdir' '+' "${@}"
         ;;
     rmfilter_readdir)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/readdir" '-' "${@}"
+        sydbox_internal_path_1 'filter/readdir' '-' "${@}"
         ;;
     addfilter_mkdir)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/mkdir" '+' "${@}"
+        sydbox_internal_path_1 'filter/mkdir' '+' "${@}"
         ;;
     rmfilter_mkdir)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/mkdir" '-' "${@}"
+        sydbox_internal_path_1 'filter/mkdir' '-' "${@}"
         ;;
     addfilter_chown)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/chown" '+' "${@}"
+        sydbox_internal_path_1 'filter/chown' '+' "${@}"
         ;;
     rmfilter_chown)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/chown" '-' "${@}"
+        sydbox_internal_path_1 'filter/chown' '-' "${@}"
         ;;
     addfilter_chgrp)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/chgrp" '+' "${@}"
+        sydbox_internal_path_1 'filter/chgrp' '+' "${@}"
         ;;
     rmfilter_chgrp)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/chgrp" '-' "${@}"
+        sydbox_internal_path_1 'filter/chgrp' '-' "${@}"
         ;;
     addfilter_chmod)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/chmod" '+' "${@}"
+        sydbox_internal_path_1 'filter/chmod' '+' "${@}"
         ;;
     rmfilter_chmod)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/chmod" '-' "${@}"
+        sydbox_internal_path_1 'filter/chmod' '-' "${@}"
         ;;
     addfilter_chattr)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/chattr" '+' "${@}"
+        sydbox_internal_path_1 'filter/chattr' '+' "${@}"
         ;;
     rmfilter_chattr)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/chattr" '-' "${@}"
+        sydbox_internal_path_1 'filter/chattr' '-' "${@}"
         ;;
     addfilter_chroot)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/chroot" '+' "${@}"
+        sydbox_internal_path_1 'filter/chroot' '+' "${@}"
         ;;
     rmfilter_chroot)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/chroot" '-' "${@}"
+        sydbox_internal_path_1 'filter/chroot' '-' "${@}"
         ;;
     addfilter_utime)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/utime" '+' "${@}"
+        sydbox_internal_path_1 'filter/utime' '+' "${@}"
         ;;
     rmfilter_utime)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/utime" '-' "${@}"
+        sydbox_internal_path_1 'filter/utime' '-' "${@}"
         ;;
     addfilter_mkdev)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/mkdev" '+' "${@}"
+        sydbox_internal_path_1 'filter/mkdev' '+' "${@}"
         ;;
     rmfilter_mkdev)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/mkdev" '-' "${@}"
+        sydbox_internal_path_1 'filter/mkdev' '-' "${@}"
         ;;
     addfilter_mkfifo)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/mkfifo" '+' "${@}"
+        sydbox_internal_path_1 'filter/mkfifo' '+' "${@}"
         ;;
     rmfilter_mkfifo)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/mkfifo" '-' "${@}"
+        sydbox_internal_path_1 'filter/mkfifo' '-' "${@}"
         ;;
     addfilter_mktemp)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/mktemp" '+' "${@}"
+        sydbox_internal_path_1 'filter/mktemp' '+' "${@}"
         ;;
     rmfilter_mktemp)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/mktemp" '-' "${@}"
+        sydbox_internal_path_1 'filter/mktemp' '-' "${@}"
         ;;
     addfilter_net)
         local c='filter/net/bind'
@@ -998,14 +998,14 @@ esandbox_3()
         ;;
     kill)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_3 "exec/kill" "+" "${@}"
+        sydbox_internal_path_3 'exec/kill' "+" "${@}"
         ;;
     resume)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        ebuild_notice "warning" "${FUNCNAME} ${cmd} is not implemented for sydbox-3"
+        ebuild_notice 'warning' "${FUNCNAME} ${cmd} is not implemented for sydbox-3"
         false;;
     hack_toolong|nohack_toolong)
-        ebuild_notice "warning" "${FUNCNAME} ${cmd} is not implemented for sydbox-3"
+        ebuild_notice 'warning' "${FUNCNAME} ${cmd} is not implemented for sydbox-3"
         false;;
     *)
         die "${FUNCNAME} subcommand ${cmd} unrecognised"
@@ -1026,25 +1026,25 @@ esandbox_1()
         [[ -e /dev/sydbox ]]
         ;;
     lock)
-        [[ -e "/dev/sydbox/core/trace/magic_lock:on" ]]
+        [[ -e '/dev/sydbox/core/trace/magic_lock:on' ]]
         ;;
     exec_lock)
-        [[ -e "/dev/sydbox/core/trace/magic_lock:exec" ]]
+        [[ -e '/dev/sydbox/core/trace/magic_lock:exec' ]]
         ;;
     wait_all)
-        [[ -e "/dev/sydbox/core/trace/exit_wait_all:true" ]]
+        [[ -e '/dev/sydbox/core/trace/exit_wait_all:true' ]]
         ;;
     wait_eldest)
-        [[ -e "/dev/sydbox/core/trace/exit_wait_all:false" ]]
+        [[ -e '/dev/sydbox/core/trace/exit_wait_all:false' ]]
         ;;
     enabled|enabled_path)
-        [[ -e "/dev/sydbox/core/sandbox/write?" ]]
+        [[ -e '/dev/sydbox/core/sandbox/write?' ]]
         ;;
     enable|enable_path)
-        [[ -e "/dev/sydbox/core/sandbox/write:deny" ]]
+        [[ -e '/dev/sydbox/core/sandbox/write:deny' ]]
         ;;
     disable|disable_path)
-        [[ -e "/dev/sydbox/core/sandbox/write:off" ]]
+        [[ -e '/dev/sydbox/core/sandbox/write:off' ]]
         ;;
     enabled_stat)
         false
@@ -1065,39 +1065,39 @@ esandbox_1()
         : # no-op, only supported for syd[>=3]
         ;;
     enabled_write|enabled_ioctl|enabled_create|enabled_delete|enabled_rename|enabled_symlink|enabled_truncate|enabled_chdir|enabled_readdir|enabled_mkdir|enabled_chown|enabled_chgrp|enabled_chmod|enabled_chattr|enabled_chroot|enabled_utime|enabled_mkdev|enabled_mkfifo|enabled_mktemp)
-        [[ -e "/dev/sydbox/core/sandbox/write?" ]]
+        [[ -e '/dev/sydbox/core/sandbox/write?' ]]
         ;;
     enable_write|enable_ioctl|enable_create|enable_delete|enable_rename|enable_symlink|enable_truncate|enable_chdir|enable_readdir|enable_mkdir|enable_chown|enable_chgrp|enable_chmod|enable_chattr|enable_chroot|enable_utime|enable_mkdev|enable_mkfifo|enable_mktemp)
-        [[ -e "/dev/sydbox/core/sandbox/write:deny" ]]
+        [[ -e '/dev/sydbox/core/sandbox/write:deny' ]]
         ;;
     disable_write|disable_ioctl|disable_create|disable_delete|disable_rename|disable_symlink|disable_truncate|disable_chdir|disable_readdir|disable_mkdir|disable_chown|disable_chgrp|disable_chmod|disable_chattr|disable_chroot|disable_utime|disable_mkdev|disable_mkfifo|disable_mktemp)
-        [[ -e "/dev/sydbox/core/sandbox/write:off" ]]
+        [[ -e '/dev/sydbox/core/sandbox/write:off' ]]
         ;;
     enabled_exec)
-        [[ -e "/dev/sydbox/core/sandbox/exec?" ]]
+        [[ -e '/dev/sydbox/core/sandbox/exec?' ]]
         ;;
     enable_exec)
-        [[ -e "/dev/sydbox/core/sandbox/exec:deny" ]]
+        [[ -e '/dev/sydbox/core/sandbox/exec:deny' ]]
         ;;
     disable_exec)
-        [[ -e "/dev/sydbox/core/sandbox/exec:off" ]]
+        [[ -e '/dev/sydbox/core/sandbox/exec:off' ]]
         ;;
     enabled_net)
-        [[ -e "/dev/sydbox/core/sandbox/network?" ]]
+        [[ -e '/dev/sydbox/core/sandbox/network?' ]]
         ;;
     enable_net)
-        [[ -e "/dev/sydbox/core/sandbox/network:deny" ]]
+        [[ -e '/dev/sydbox/core/sandbox/network:deny' ]]
         ;;
     disable_net)
-        [[ -e "/dev/sydbox/core/sandbox/network:off" ]]
+        [[ -e '/dev/sydbox/core/sandbox/network:off' ]]
         ;;
     allow|allow_path|allow_write|allow_ioctl|allow_create|allow_delete|allow_rename|allow_symlink|allow_truncate|allow_chdir|allow_readdir|allow_mkdir|allow_chown|allow_chgrp|allow_chmod|allow_chroot|allow_utime|allow_mkdev|allow_mkfifo|allow_mktemp)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "whitelist/write" '+' "${@}"
+        sydbox_internal_path_1 'whitelist/write' '+' "${@}"
         ;;
     disallow|disallow_path|disallow_write|disallow_ioctl|disallow_create|disallow_delete|disallow_rename|disallow_symlink|disallow_truncate|disallow_chdir|disallow_readdir|disallow_mkdir|disallow_chown|disallow_chgrp|disallow_chmod|disallow_chroot|disallow_utime|disallow_mkdev|disallow_mkfifo|disallow_mktemp)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "whitelist/write" '-' "${@}"
+        sydbox_internal_path_1 'whitelist/write' '-' "${@}"
         ;;
     deny_write|deny_ioctl|deny_create|deny_delete|deny_rename|deny_symlink|deny_truncate|deny_chdir|deny_readdir|deny_mkdir|deny_chown|deny_chgrp|deny_chmod|deny_chroot|deny_utime|deny_mkdev|deny_mkfifo|deny_mktemp)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
@@ -1141,33 +1141,33 @@ esandbox_1()
         ;;
     allow_exec)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "whitelist/exec" '+' "${@}"
+        sydbox_internal_path_1 'whitelist/exec' '+' "${@}"
         ;;
     disallow_exec)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "whitelist/exec" '-' "${@}"
+        sydbox_internal_path_1 'whitelist/exec' '-' "${@}"
         ;;
     allow_net)
-        local c="whitelist/network/bind"
-        [[ "${1}" == "--connect" ]] && c="whitelist/network/connect" && shift
-        [[ "${1}" == "--sendfd" ]] && c="whitelist/network/connect" && shift
+        local c='whitelist/network/bind'
+        [[ "${1}" == '--connect' ]] && c='whitelist/network/connect' && shift
+        [[ "${1}" == '--sendfd' ]] && c='whitelist/network/connect' && shift
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
         sydbox_internal_net_1 "${c}" '+' "${@}"
         ;;
     disallow_net)
-        local c="whitelist/network/bind"
-        [[ "${1}" == "--connect" ]] && c="whitelist/network/connect" && shift
-        [[ "${1}" == "--sendfd" ]] && c="whitelist/network/connect" && shift
+        local c='whitelist/network/bind'
+        [[ "${1}" == '--connect' ]] && c='whitelist/network/connect' && shift
+        [[ "${1}" == '--sendfd' ]] && c='whitelist/network/connect' && shift
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
         sydbox_internal_net_1 "${c}" '-' "${@}"
         ;;
     addfilter|addfilter_path|addfilter_write|addfilter_ioctl|addfilter_create|addfilter_delete|addfilter_rename|addfilter_symlink|addfilter_truncate|addfilter_chdir|addfilter_readdir|addfilter_mkdir|addfilter_chown|addfilter_chgrp|addfilter_chmod|addfilter_chroot|addfilter_utime|addfilter_mkdev|addfilter_mkfifo|addfilter_mktemp)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/write" '+' "${@}"
+        sydbox_internal_path_1 'filter/write' '+' "${@}"
         ;;
     rmfilter|rmfilter_path|rmfilter_write|rmfilter_ioctl|rmfilter_create|rmfilter_delete|rmfilter_rename|rmfilter_symlink|rmfilter_truncate|rmfilter_chdir|rmfilter_readdir|rmfilter_mkdir|rmfilter_chown|rmfilter_chgrp|rmfilter_chmod|rmfilter_chroot|rmfilter_utime|rmfilter_mkdev|rmfilter_mkfifo|rmfilter_mktemp)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/write" '-' "${@}"
+        sydbox_internal_path_1 'filter/write' '-' "${@}"
         ;;
     addfilter_stat)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
@@ -1187,19 +1187,19 @@ esandbox_1()
         ;;
     addfilter_exec)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/exec" '+' "${@}"
+        sydbox_internal_path_1 'filter/exec' '+' "${@}"
         ;;
     rmfilter_exec)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "filter/exec" '-' "${@}"
+        sydbox_internal_path_1 'filter/exec' '-' "${@}"
         ;;
     addfilter_net)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_net_1 "filter/network" '+' "${@}"
+        sydbox_internal_net_1 'filter/network' '+' "${@}"
         ;;
     rmfilter_net)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_net_1 "filter/network" '-' "${@}"
+        sydbox_internal_net_1 'filter/network' '-' "${@}"
         ;;
     exec)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
@@ -1207,14 +1207,14 @@ esandbox_1()
         ;;
     kill)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "exec/kill_if_match" "+" "${@}"
+        sydbox_internal_path_1 'exec/kill_if_match' "+" "${@}"
         ;;
     resume)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
-        sydbox_internal_path_1 "exec/resume_if_match" "+" "${@}"
+        sydbox_internal_path_1 'exec/resume_if_match' "+" "${@}"
         ;;
     hack_toolong|nohack_toolong)
-        ebuild_notice "warning" "${FUNCNAME} ${cmd} is not implemented for sydbox-1"
+        ebuild_notice 'warning' "${FUNCNAME} ${cmd} is not implemented for sydbox-1"
         false;;
     *)
         die "${FUNCNAME} subcommand ${cmd} unrecognised"
@@ -1251,7 +1251,7 @@ esandbox() {
 
 sydboxcheck()
 {
-    ebuild_notice "warning" "${FUNCNAME} is deprecated, use \"esandbox check\" instead"
+    ebuild_notice 'warning' "${FUNCNAME} is deprecated, use \"esandbox check\" instead"
     esandbox check
 }
 
@@ -1267,7 +1267,7 @@ addread()
 
 addwrite()
 {
-    ebuild_notice "warning" "${FUNCNAME} is deprecated, use \"esandbox allow\" instead"
+    ebuild_notice 'warning' "${FUNCNAME} is deprecated, use \"esandbox allow\" instead"
     esandbox allow "${1}"
 }
 
@@ -1283,7 +1283,7 @@ addpredict()
 
 rmwrite()
 {
-    ebuild_notice "warning" "${FUNCNAME} is deprecated, use \"esandbox disallow\" instead"
+    ebuild_notice 'warning' "${FUNCNAME} is deprecated, use \"esandbox disallow\" instead"
     esandbox disallow "${1}"
 }
 
@@ -1294,13 +1294,13 @@ rmpredict()
 
 addfilter()
 {
-    ebuild_notice "warning" "${FUNCNAME} is deprecated, use \"esandbox addfilter\" instead"
+    ebuild_notice 'warning' "${FUNCNAME} is deprecated, use \"esandbox addfilter\" instead"
     esandbox addfilter "${1}"
 }
 
 rmfilter()
 {
-    ebuild_notice "warning" "${FUNCNAME} is deprecated, use \"esandbox rmfilter\" instead"
+    ebuild_notice 'warning' "${FUNCNAME} is deprecated, use \"esandbox rmfilter\" instead"
     esandbox rmfilter "${1}"
 }
 
