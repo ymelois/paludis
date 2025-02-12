@@ -122,7 +122,8 @@ sydbox_internal_net_3()
             [[ -e "/dev/syd/${cmd}${op}${1##inet:}" ]]
             ;;
         unix-abstract:*)
-            [[ -e "/dev/syd/${cmd}${op}${1##unix-abstract:}" ]]
+            # Sydbox prefixes UNIX abstract sockets with `@'.
+            [[ -e "/dev/syd/${cmd}${op}@${1##unix-abstract:}" ]]
             ;;
         unix:*)
             [[ -e "/dev/syd/${cmd}${op}${1##unix:}" ]]
