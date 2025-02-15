@@ -264,15 +264,6 @@ esandbox_3()
     disable_truncate)
         [[ -e '/dev/syd/sandbox/truncate:off' ]]
         ;;
-    enabled_truncate)
-        [[ -e '/dev/syd/sandbox/truncate?' ]]
-        ;;
-    enable_truncate)
-        [[ -e '/dev/syd/sandbox/truncate:on' ]]
-        ;;
-    disable_truncate)
-        [[ -e '/dev/syd/sandbox/truncate:off' ]]
-        ;;
     enabled_chdir)
         [[ -e '/dev/syd/sandbox/chdir?' ]]
         ;;
