@@ -118,5 +118,6 @@ hi def link PaludisOutputConfComment                     Comment
 hi def link PaludisOutputConfSection                     Type
 hi def link PaludisOutputConfSectionName                 Special
 
+setlocal commentstring=#\ %s
 let b:current_syntax = "paludis-repositories-conf"
 

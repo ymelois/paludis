@@ -41,5 +41,6 @@ hi def link PaludisUseConfFlag             Keyword
 hi def link PaludisUseConfFlagValue        Type
 hi def link PaludisUseConfContinuation     Preproc
 
+setlocal commentstring=#\ %s
 let b:current_syntax = "paludis-use-conf"
 

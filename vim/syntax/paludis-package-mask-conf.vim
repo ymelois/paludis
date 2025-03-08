@@ -33,5 +33,6 @@ hi def link PaludisPackageMaskConfSet              Special
 hi def link PaludisPackageMaskConfWildcard         Special
 hi def link PaludisPackageMaskToken                Macro
 
+setlocal commentstring=#\ %s
 let b:current_syntax = "paludis-package-mask-conf"
 

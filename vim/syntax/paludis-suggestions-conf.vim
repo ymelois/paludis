@@ -37,5 +37,6 @@ hi def link PaludisSuggestionsConfGroup            Macro
 hi def link PaludisSuggestionsConfName             Keyword
 hi def link PaludisSuggestionsConfContinuation     Preproc
 
+setlocal commentstring=#\ %s
 let b:current_syntax = "paludis-suggestions-conf"
 

@@ -119,5 +119,6 @@ hi def link PaludisRepositoriesConfBadMacro                    Error
 hi def link PaludisRepositoriesConfContinuation                Preproc
 hi def link PaludisRepositoriesConfComment                     Comment
 
+setlocal commentstring=#\ %s
 let b:current_syntax = "paludis-repositories-conf"
 

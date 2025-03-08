@@ -55,5 +55,6 @@ hi def link PaludisGeneralConfEnvVariable      Statement
 hi def link PaludisGeneralConfContinuation     Preproc
 hi def link PaludisGeneralConfComment          Comment
 
+setlocal commentstring=#\ %s
 let b:current_syntax = "paludis-general-conf"
 

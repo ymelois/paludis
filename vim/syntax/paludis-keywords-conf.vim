@@ -35,5 +35,6 @@ hi def link PaludisKeywordsConfSet              Special
 hi def link PaludisKeywordsConfKeyword          Keyword
 hi def link PaludisKeywordsConfContinuation     Preproc
 
+setlocal commentstring=#\ %s
 let b:current_syntax = "paludis-keywords-conf"
 

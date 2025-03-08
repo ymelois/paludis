@@ -38,5 +38,6 @@ hi def link PaludisLicensesConfLicense          Keyword
 hi def link PaludisLicensesConfLicenseGroup     Macro
 hi def link PaludisLicensesConfContinuation     Preproc
 
+setlocal commentstring=#\ %s
 let b:current_syntax = "paludis-licenses-conf"
 

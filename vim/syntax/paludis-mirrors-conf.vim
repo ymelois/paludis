@@ -32,5 +32,6 @@ hi def link PaludisMirrorsConfSet              Special
 hi def link PaludisMirrorsConfURI              Keyword
 hi def link PaludisMirrorsConfContinuation     Preproc
 
+setlocal commentstring=#\ %s
 let b:current_syntax = "paludis-mirrors-conf"
 
