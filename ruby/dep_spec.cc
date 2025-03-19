@@ -1124,6 +1124,7 @@ namespace
          * A NamedSetDepSpec represents a fetchable URI spec.
          */
         c_named_set_dep_spec = rb_define_class_under(paludis_module(), "NamedSetDepSpec", c_string_dep_spec);
+        rb_undef_alloc_func(c_named_set_dep_spec);
         rb_funcall(c_named_set_dep_spec, rb_intern("private_class_method"), 1, rb_str_new2("new"));
         VALUE (* named_set_dep_spec_to_s) (VALUE) = &dep_spec_to_s<NamedSetDepSpec>;
         rb_define_method(c_named_set_dep_spec, "to_s", RUBY_FUNC_CAST(named_set_dep_spec_to_s), 0);
