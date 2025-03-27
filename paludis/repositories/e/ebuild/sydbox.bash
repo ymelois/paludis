@@ -779,6 +779,32 @@ esandbox_3()
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
         sydbox_internal_net_3 "${c}" '-' "${@}"
         ;;
+    deny_net)
+        local c='deny/net/bind'
+        case "${1}" in
+        '--connect')
+            c='deny/net/connect'
+            shift;;
+        '--sendfd')
+            c='deny/net/sendfd'
+            shift;;
+        esac
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        sydbox_internal_net_3 "${c}" '+' "${@}"
+        ;;
+    nodeny_net)
+        local c='deny/net/bind'
+        case "${1}" in
+        '--connect')
+            c='deny/net/connect'
+            shift;;
+        '--sendfd')
+            c='deny/net/sendfd'
+            shift;;
+        esac
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        sydbox_internal_net_3 "${c}" '-' "${@}"
+        ;;
     addfilter|addfilter_path)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
         sydbox_internal_path_1 'filter/write' '+' "${@}"
@@ -1079,6 +1105,10 @@ esandbox_1()
         ;;
     disable_net)
         [[ -e '/dev/sydbox/core/sandbox/network:off' ]]
+        ;;
+    deny_net|nodeny_net)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        : # no-op, only supported for syd[>=3]
         ;;
     allow|allow_path|allow_write|allow_ioctl|allow_create|allow_delete|allow_rename|allow_symlink|allow_truncate|allow_chdir|allow_readdir|allow_mkdir|allow_chown|allow_chgrp|allow_chmod|allow_chroot|allow_utime|allow_mkdev|allow_mkfifo|allow_mktemp)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
