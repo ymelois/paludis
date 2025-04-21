@@ -1464,7 +1464,7 @@ Process::sydbox(const std::string & ebuild_phase,
                 // LandLock profile must be the last supplied for it to work.
                 _imp->command.prepend_args({
                     "--profile", "landlock",
-                    "-mallow/lock/write+" + builddir,
+                    "-mallow/lock/all+" + builddir,
                 });
             }
             if (ebuild_phase.find("install") == std::string::npos) {
