@@ -118,6 +118,7 @@ Merger::merge()
     if (! _imp->params.no_chown())
         do_ownership_fixes_recursive(_imp->params.image());
 
+    on_begin_merge();
     do_dir_recursive(false, _imp->params.image(), canonicalise_root_path(_imp->params.root() / _imp->params.install_under()));
     on_done_merge();
 
@@ -128,6 +129,11 @@ Merger::merge()
                 _imp->params.maybe_output_manager()).max_exit_status())
         Log::get_instance()->message("merger.post_hooks.failure", ll_warning, lc_context) <<
             "Merge of '" << _imp->params.image() << "' to '" << _imp->params.root() << "' post hooks returned non-zero";
+}
+
+void
+Merger::on_begin_merge()
+{
 }
 
 

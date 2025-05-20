@@ -98,6 +98,12 @@ namespace paludis
             virtual Hook extend_hook(const Hook &);
 
             /**
+             * Allows subclasses to perform behaviour before anything has been
+             * merged, after initialization.
+             */
+            virtual void on_begin_merge();
+
+            /**
              * When called, makes check()'s result a failure.
              */
             void make_check_fail();
