@@ -168,7 +168,7 @@ PbinMerger::display_override(const std::string & message) const
 }
 
 void
-PbinMerger::on_done_merge()
+PbinMerger::on_begin_merge()
 {
     add_file(_imp->params.environment_file(), FSPath("/PBIN/environment"));
 }

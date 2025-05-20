@@ -75,7 +75,7 @@ namespace paludis
 
                 void on_enter_dir(bool is_check, const FSPath) override;
 
-                void on_done_merge() override;
+                void on_begin_merge() override;
 
                 void track_install_dir(const FSPath &, const FSPath &) override;
                 void track_install_file(const FSPath &, const FSPath &) override;
