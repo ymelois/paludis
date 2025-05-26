@@ -114,10 +114,6 @@ hooks.</p>
     <li><code>install_post</code></li>
     <li><code>install_all_pre</code></li>
     <li><code>install_all_post</code></li>
-    <li><code>install_pretend_pre</code></li>
-    <li><code>install_pretend_post</code></li>
-    <li><code>install_pretend_display_item_pre</code></li>
-    <li><code>install_pretend_display_item_post</code></li>
     <li><code>install_task_execute_pre</code></li>
     <li><code>install_task_execute_post</code></li>
     <li><code>uninstall_pre</code></li>
@@ -137,8 +133,6 @@ hooks.</p>
     <li><code>sync_all_post</code></li>
     <li><code>fetch_pre</code></li>
     <li><code>fetch_post</code></li>
-    <li><code>fetch_all_pre</code></li>
-    <li><code>fetch_all_post</code></li>
 </ul>
 
 <p>In general, certain special environment variables will be set:</p>
@@ -150,8 +144,6 @@ hooks.</p>
     <li>For non-<code>all</code> hooks, <code>TARGET</code> will contain the current
     target.</li>
     <li>The <code>PALUDIS_CMDLINE</code> variables described below are also available.
-    <li>For the <code>install_pretend_display_item</code> hooks, the <code>KIND</code> variable will also be of
-    interest.</li>
     <li>For the <code>install_task_execute_pre</code> and <code>install_task_execute_post</code> hooks,
     <code>PRETEND</code>, <code>FETCH_ONLY</code> and <code>SUCCESS</code> may be useful.</li>
 </ul>

@@ -14,14 +14,10 @@ foreach(directory
           install_post
           install_all_pre
           install_all_post
-          install_pretend_pre
-          install_pretend_post
           sync_pre
           sync_post
           sync_all_pre
           sync_all_post
-          fetch_all_pre
-          fetch_all_post
           fetch_pre
           fetch_post)
   execute_process(COMMAND
@@ -35,10 +31,6 @@ foreach(hook
           install_post
           install_all_pre
           install_all_post
-          install_pretend_pre
-          install_pretend_post
-          install_pretend_display_item_pre
-          install_pretend_display_item_post
           install_task_execute_pre
           install_task_execute_post
           clean_all_post
@@ -57,9 +49,7 @@ foreach(hook
           syn_all_pre
           sync_all_post
           fetch_pre
-          fetch_post
-          fetch_all_pre
-          fetch_all_post)
+          fetch_post)
   execute_process(COMMAND
                     "${CMAKE_COMMAND}" -E touch "$ENV{DESTDIR}${CMAKE_INSTALL_FULL_DATADIR}/paludis/hooks/${hook}/.keep")
   execute_process(COMMAND
@@ -173,8 +163,6 @@ foreach(phase
           install_post
           install_all_pre
           install_all_post
-          install_pretend_pre
-          install_pretend_post
           uninstall_pre
           uninstall_post
           uninstall_all_pre
@@ -182,11 +170,7 @@ foreach(phase
           sync_pre
           sync_post
           sync_all_pre
-          sync_all_post
-          fetch_all_pre
-          fetch_all_post
-          fetch_all_all_pre
-          fetch_all_all_post)
+          sync_all_post)
   execute_process(COMMAND
                     "${CMAKE_COMMAND}" -E touch "$ENV{DESTDIR}${CMAKE_INSTALL_FULL_LIBEXECDIR}/paludis/hooks/${phase}/.keep")
 endforeach()
@@ -240,8 +224,6 @@ execute_process(COMMAND "${CMAKE_COMMAND}" -E create_symlink "${CMAKE_INSTALL_FU
 execute_process(COMMAND "${CMAKE_COMMAND}" -E create_symlink "${CMAKE_INSTALL_FULL_LIBEXECDIR}/paludis/hooks/common/log.bash" "$ENV{DESTDIR}${CMAKE_INSTALL_FULL_LIBEXECDIR}/paludis/hooks/install_all_post/log.bash")
 execute_process(COMMAND "${CMAKE_COMMAND}" -E create_symlink "${CMAKE_INSTALL_FULL_LIBEXECDIR}/paludis/hooks/common/log.bash" "$ENV{DESTDIR}${CMAKE_INSTALL_FULL_LIBEXECDIR}/paludis/hooks/install_pre/log.bash")
 execute_process(COMMAND "${CMAKE_COMMAND}" -E create_symlink "${CMAKE_INSTALL_FULL_LIBEXECDIR}/paludis/hooks/common/log.bash" "$ENV{DESTDIR}${CMAKE_INSTALL_FULL_LIBEXECDIR}/paludis/hooks/install_post/log.bash")
-execute_process(COMMAND "${CMAKE_COMMAND}" -E create_symlink "${CMAKE_INSTALL_FULL_LIBEXECDIR}/paludis/hooks/common/log.bash" "$ENV{DESTDIR}${CMAKE_INSTALL_FULL_LIBEXECDIR}/paludis/hooks/fetch_all_pre/log.bash")
-execute_process(COMMAND "${CMAKE_COMMAND}" -E create_symlink "${CMAKE_INSTALL_FULL_LIBEXECDIR}/paludis/hooks/common/log.bash" "$ENV{DESTDIR}${CMAKE_INSTALL_FULL_LIBEXECDIR}/paludis/hooks/fetch_all_post/log.bash")
 execute_process(COMMAND "${CMAKE_COMMAND}" -E create_symlink "${CMAKE_INSTALL_FULL_LIBEXECDIR}/paludis/hooks/common/log.bash" "$ENV{DESTDIR}${CMAKE_INSTALL_FULL_LIBEXECDIR}/paludis/hooks/fetch_pre/log.bash")
 execute_process(COMMAND "${CMAKE_COMMAND}" -E create_symlink "${CMAKE_INSTALL_FULL_LIBEXECDIR}/paludis/hooks/common/log.bash" "$ENV{DESTDIR}${CMAKE_INSTALL_FULL_LIBEXECDIR}/paludis/hooks/fetch_post/log.bash")
 execute_process(COMMAND "${CMAKE_COMMAND}" -E create_symlink "${CMAKE_INSTALL_FULL_LIBEXECDIR}/paludis/hooks/common/log.bash" "$ENV{DESTDIR}${CMAKE_INSTALL_FULL_LIBEXECDIR}/paludis/hooks/clean_all_pre/log.bash")

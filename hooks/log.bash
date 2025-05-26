@@ -84,14 +84,6 @@ fi
             echo "finished fetch of package ${TARGET}${COUNTS}"
         ;;
 
-        fetch_all_pre)
-            echo "starting fetch of targets ${TARGETS}"
-        ;;
-
-        fetch_all_post)
-            echo "finished fetch of targets ${TARGETS}"
-        ;;
-
         sync_pre)
             echo "starting sync of repository ${TARGET}${COUNTS}"
         ;;
