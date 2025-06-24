@@ -32,6 +32,7 @@ using namespace paludis;
 struct PaludisTarExtras
 {
     struct archive * archive;
+    struct archive * disk_archive;
     struct archive_entry_linkresolver * linkresolver;
 };
 
@@ -55,6 +56,13 @@ paludis_tar_extras_init(const std::string & f, const std::string & compress)
     if (ARCHIVE_OK != archive_write_open_filename(extras->archive, f.c_str()))
         throw MergerError("archive_write_open_filename failed");
 
+    extras->disk_archive = archive_read_disk_new();
+    if (! extras->disk_archive)
+        throw MergerError("archive_read_disk_new failed");
+
+    archive_read_disk_set_standard_lookup(extras->disk_archive);
+    archive_read_disk_set_symlink_physical(extras->disk_archive);
+
     extras->linkresolver = archive_entry_linkresolver_new();
 
     if (extras->linkresolver == nullptr)
@@ -73,12 +81,10 @@ paludis_tar_extras_add_dir(PaludisTarExtras * const extras, const std::string & 
     if (! entry)
         throw MergerError("archive_entry_new returned null");
 
-    struct stat st;
-    if (0 != lstat(from.c_str(), &st))
-        throw MergerError("lstat failed");
-
+    archive_entry_copy_sourcepath(entry, from.c_str());
     archive_entry_copy_pathname(entry, path.c_str());
-    archive_entry_copy_stat(entry, &st);
+    if (ARCHIVE_OK != archive_read_disk_entry_from_file(extras->disk_archive, entry, -1, nullptr))
+        throw MergerError(std::string("archive_read_disk_entry_from_file failed: ") + archive_error_string(extras->disk_archive));
     if (ARCHIVE_OK != archive_write_header(extras->archive, entry))
         throw MergerError("archive_write_header failed");
 
@@ -92,20 +98,14 @@ extern "C"
 void
 paludis_tar_extras_add_file(PaludisTarExtras * const extras, const std::string & from, const std::string & path)
 {
-    struct archive * disk_archive(archive_read_disk_new());
-    if (! disk_archive)
-        throw MergerError("archive_read_disk_new failed");
-
-    archive_read_disk_set_standard_lookup(disk_archive);
-
     struct archive_entry * entry(archive_entry_new());
     struct archive_entry * sparse(archive_entry_new());
 
     int fd(open(from.c_str(), O_RDONLY));
 
     archive_entry_copy_pathname(entry, path.c_str());
-    if (ARCHIVE_OK != archive_read_disk_entry_from_file(disk_archive, entry, fd, nullptr))
-        throw MergerError("archive_read_disk_entry_from_file failed");
+    if (ARCHIVE_OK != archive_read_disk_entry_from_file(extras->disk_archive, entry, fd, nullptr))
+        throw MergerError(std::string("archive_read_disk_entry_from_file failed: ") + archive_error_string(extras->disk_archive));
 
     archive_entry_linkify(extras->linkresolver, &entry, &sparse);
 
@@ -124,9 +124,6 @@ paludis_tar_extras_add_file(PaludisTarExtras * const extras, const std::string &
 
         if (ARCHIVE_OK != archive_write_finish_entry(extras->archive))
             throw MergerError("archive_write_finish_entry failed");
-
-        if (ARCHIVE_OK != archive_read_free(disk_archive))
-            throw MergerError("archive_read_finish failed");
     }
     else
         close(fd);
@@ -142,12 +139,10 @@ paludis_tar_extras_add_sym(PaludisTarExtras * const extras, const std::string & 
     if (! entry)
         throw MergerError("archive_entry_new returned null");
 
-    struct stat st;
-    if (0 != lstat(from.c_str(), &st))
-        throw MergerError("lstat failed");
-
+    archive_entry_copy_sourcepath(entry, from.c_str());
     archive_entry_copy_pathname(entry, path.c_str());
-    archive_entry_copy_stat(entry, &st);
+    if (ARCHIVE_OK != archive_read_disk_entry_from_file(extras->disk_archive, entry, -1, nullptr))
+        throw MergerError(std::string("archive_read_disk_entry_from_file failed: ") + archive_error_string(extras->disk_archive));
     archive_entry_copy_symlink(entry, dest.c_str());
     archive_entry_set_size(entry, dest.length());
     if (ARCHIVE_OK != archive_write_header(extras->archive, entry))
@@ -163,6 +158,9 @@ extern "C"
 void
 paludis_tar_extras_cleanup(PaludisTarExtras * const extras)
 {
+    if (ARCHIVE_OK != archive_read_free(extras->disk_archive))
+        throw MergerError("archive_read_finish failed");
+
     if (ARCHIVE_OK != archive_write_close(extras->archive))
         throw MergerError("archive_write_close failed");
     if (ARCHIVE_OK != archive_write_free(extras->archive))
