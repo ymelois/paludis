@@ -6,7 +6,7 @@ require 'rdoc/rdoc'
 
 module RDoc
 
-    class C_Parser_Paludis < const_defined?(:C_Parser) ? C_Parser : Parser::C
+    class C_Parser_Paludis < Parser::C
         #override C_Parse
         parse_files_matching(/\.(c|cc|cpp|CC)$/)
 
@@ -85,7 +85,7 @@ end
 begin
   r = RDoc::RDoc.new
   r.document(ARGV)
-rescue RDoc::RDocError => e
+rescue RDoc::Error => e
   $stderr.puts e.message
   exit(1)
 end
