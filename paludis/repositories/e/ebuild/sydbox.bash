@@ -174,6 +174,15 @@ esandbox_3()
         # Compatibility with syd-1:
         test -c '/dev/syd/sandbox/all:off'
         ;;
+    enabled_walk)
+        [[ -e '/dev/syd/sandbox/walk?' ]]
+        ;;
+    enable_walk)
+        [[ -e '/dev/syd/sandbox/walk:on' ]]
+        ;;
+    disable_walk)
+        [[ -e '/dev/syd/sandbox/walk:off' ]]
+        ;;
     enabled_stat)
         [[ -e '/dev/syd/sandbox/stat?' ]]
         ;;
@@ -418,6 +427,22 @@ esandbox_3()
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
         # Compatibility with syd-1:
         sydbox_internal_path_3 'deny/all' '-' "${@}"
+        ;;
+    allow_walk)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        sydbox_internal_path_3 'allow/walk' '+' "${@}"
+        ;;
+    disallow_walk)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        sydbox_internal_path_3 'allow/walk' '-' "${@}"
+        ;;
+    deny_walk)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        sydbox_internal_path_3 'deny/walk' '+' "${@}"
+        ;;
+    nodeny_walk)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        sydbox_internal_path_3 'deny/walk' '-' "${@}"
         ;;
     allow_stat)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
@@ -863,6 +888,14 @@ esandbox_3()
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
         sydbox_internal_path_1 'filter/write' '-' "${@}"
         ;;
+    addfilter_walk)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        sydbox_internal_path_1 'filter/walk' '+' "${@}"
+        ;;
+    rmfilter_walk)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        sydbox_internal_path_1 'filter/walk' '-' "${@}"
+        ;;
     addfilter_stat)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
         sydbox_internal_path_1 'filter/stat' '+' "${@}"
@@ -1127,6 +1160,15 @@ esandbox_1()
     disable|disable_path)
         [[ -e '/dev/sydbox/core/sandbox/write:off' ]]
         ;;
+    enabled_walk)
+        false
+        ;;
+    enable_walk)
+        : # no-op, only supported for syd[>=3]
+        ;;
+    disable_walk)
+        : # no-op, only supported for syd[>=3]
+        ;;
     enabled_stat)
         false
         ;;
@@ -1192,6 +1234,22 @@ esandbox_1()
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
         : # no-op, only supported for syd[>=3]
         ;;
+    allow_walk)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        : # no-op, only supported for syd[>=3]
+        ;;
+    disallow_walk)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        : # no-op, only supported for syd[>=3]
+        ;;
+    deny_walk)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        : # no-op, only supported for syd[>=3]
+        ;;
+    nodeny_walk)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        : # no-op, only supported for syd[>=3]
+        ;;
     allow_stat)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
         : # no-op, only supported for syd[>=3]
@@ -1253,6 +1311,14 @@ esandbox_1()
     rmfilter|rmfilter_path|rmfilter_write|rmfilter_ioctl|rmfilter_create|rmfilter_delete|rmfilter_rename|rmfilter_symlink|rmfilter_truncate|rmfilter_chdir|rmfilter_readdir|rmfilter_mkdir|rmfilter_rmdir|rmfilter_chown|rmfilter_chgrp|rmfilter_chmod|rmfilter_chroot|rmfilter_utime|rmfilter_mkbdev|rmfilter_mkcdev|rmfilter_mkfifo|rmfilter_mktemp)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
         sydbox_internal_path_1 'filter/write' '-' "${@}"
+        ;;
+    addfilter_walk)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        : # no-op, only supported for syd[>=3]
+        ;;
+    rmfilter_walk)
+        [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
+        : # no-op, only supported for syd[>=3]
         ;;
     addfilter_stat)
         [[ ${#} < 1 ]] && die "${FUNCNAME} ${cmd} takes at least one extra argument"
