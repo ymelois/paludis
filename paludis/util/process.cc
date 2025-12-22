@@ -1457,11 +1457,10 @@ Process::sydbox(const std::string & ebuild_phase,
                     ebuild_phase.find("compile") != std::string::npos ||
                     ebuild_phase.find("test") != std::string::npos ||
                     ebuild_phase.find("install") != std::string::npos) {
-            _imp->command.prepend_args({ "--" });
+            // Specify paludis profile last so it can override others.
+            _imp->command.prepend_args({ "--profile", "paludis", "--" });
             if (can_use_landlock) {
-                // see syd-cat landlock for the rules this profile has.
-                // Careful, we stack Paludis and Landlock profiles and
-                // LandLock profile must be the last supplied for it to work.
+                // See syd-cat landlock for the rules this profile has.
                 _imp->command.prepend_args({
                     "--profile", "landlock",
                     "-mallow/lock/all+" + builddir,
@@ -1469,8 +1468,8 @@ Process::sydbox(const std::string & ebuild_phase,
             }
             if (ebuild_phase.find("install") == std::string::npos) {
                 if (can_use_unshare) {
-                    // see syd-cat immutable for the rules this profile has.
-                    // note install runs as root:root as we can't use this profile,
+                    // See syd-cat immutable for the rules this profile has.
+                    // install runs as root:root so we can't use this profile,
                     // however we still use landlock for install phase.
                     _imp->command.prepend_args({ "--profile", "immutable" });
                 }
@@ -1478,21 +1477,22 @@ Process::sydbox(const std::string & ebuild_phase,
                 // install runs as root:root and we do not want to drop capabilities.
                 _imp->command.prepend_args({ "--profile", "privileged" });
             }
-            _imp->command.prepend_args({ "sydbox", "--profile", "paludis" });
+            _imp->command.prepend_args({ "sydbox" });
         } else if (ebuild_phase.find("setup") != std::string::npos ||
                    ebuild_phase.find("preinst") != std::string::npos ||
                    ebuild_phase.find("prerm") != std::string::npos ||
                    ebuild_phase.find("postrm") != std::string::npos ||
                    ebuild_phase.find("postinst") != std::string::npos ||
                    ebuild_phase.find("config") != std::string::npos) {
-            _imp->command.prepend_args({ "--" });
+            // Specify paludis profile last so it can override others.
+            _imp->command.prepend_args({ "--profile", "paludis", "--" });
             if (can_use_sydbox_v3) {
                 // These phases run as root:root and we do not want to drop capabilities.
                 // Note, install was handled in the block above where we also add landlock.
                 // However, pkg_* functions run without landlock, they can write to /.
                 _imp->command.prepend_args({ "--profile", "privileged" });
             }
-            _imp->command.prepend_args({ "sydbox", "--profile", "paludis" });
+            _imp->command.prepend_args({ "sydbox" });
         } else {
             // Things like metadata fall here.
             // TODO: Do we want more restrictions here?
