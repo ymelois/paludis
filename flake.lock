@@ -1,0 +1,48 @@
+{
+  "nodes": {
+    "eclectic": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1788276706,
+        "narHash": "sha256-W8YXPS50UYqWl+nl4OGEEJc/Hjqa9ZKBcmHHeYiP21I=",
+        "owner": "ymelois",
+        "repo": "eclectic",
+        "rev": "415bd6599e0d6a1c1ea81d605924a33c3383d314",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ymelois",
+        "repo": "eclectic",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1788179007,
+        "narHash": "sha256-hn1oU2rue2SYK8dAr8+WNZWtbsz1S2W5mnHlSEuh3bo=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "34ab99075ac4f7e40cf037eef32cb1c360bb85e9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "eclectic": "eclectic",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
