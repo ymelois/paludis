@@ -42,6 +42,10 @@
           doCheck = false;
 
           cmakeFlags = [
+            "-DPALUDIS_CLIENTS=cave"
+            "-DPALUDIS_ENVIRONMENTS=paludis;test"
+            "-DPALUDIS_REPOSITORIES=default;accounts;gemcutter;repository"
+            "-DPALUDIS_DEFAULT_DISTRIBUTION=exherbo"
             "-DCONFIG_FRAMEWORK=eclectic"
           ];
 
