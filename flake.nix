@@ -58,12 +58,12 @@
     {
       packages = builtins.mapAttrs (system: pkgs: {
         default = mkPaludis system pkgs;
-        paludis = mkPaludis system pkgs;
+        cave = mkPaludis system pkgs;
       }) inputs.nixpkgs.legacyPackages;
 
       app = builtins.mapAttrs (system: pkgs: {
         default = mkPaludis system pkgs;
-        paludis = mkPaludis system pkgs;
+        cave = mkPaludis system pkgs;
       }) inputs.nixpkgs.legacyPackages;
 
       devShells = builtins.mapAttrs (system: pkgs: {
